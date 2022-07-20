@@ -84,4 +84,4 @@ def home():
     return render_template('home.html', majorindexes = index, stocklists = stocks, stocknews = news)
 
 if __name__ == '__main__':
-    app.run(port=0, debug = True)
+    app.run()
