@@ -1,5 +1,3 @@
-from optparse import Values
-from tkinter.ttk import LabeledScale
 from flask import Flask, render_template, url_for, flash, redirect, request
 from forms import RegistrationForm
 from stockinfo import getinfo, getlabels, getvalues
