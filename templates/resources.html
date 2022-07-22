@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StocksFinder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename ='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="{{ url_for('static', filename ='stocklogo.png') }}">
+</head>
+<body>
+    <div class="container">
+        <img class = 'logo' src="{{ url_for('static', filename = 'stocklogo.png') }}">
+        <nav>
+            <ul id = 'subpages'>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="register.html">REGISTER</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="stocksearch.html">STOCK SEARCH</a> </li>
+                <li><a href="resources.html">RESOURCES</a></li>
+                {% if current_user.is_authenticated %}
+                    <li class = 'specificli'> <a> YOU ARE CURRENTLY LOGGED IN AS: {{current_user.username}} </a> </li>
+                    <li> <a href="/logout"> LOGOUT </a> </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div> 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <ul>
+        <div class="resourcediv">
+             <li class="resource"> <h2> <a class="resource" href="https://www.investopedia.com/" target="_blank">Best free resource: Investopedia</a> </h2> </li>
+        </div>
+        <div class="resourcediv">
+            <li class="resource"> <h2><a class="resource" href="https://robinhood.com/us/en/?utm_source=google&utm_campaign=8140492012&utm_content=84157057397&utm_term=499416263023__robinhood__e&utm_medium=cpc&gclid=CjwKCAjwrNmWBhA4EiwAHbjEQIpRFBTD5TFi2dp_vbn35PYO7lrmtCXEm7rQYRXE7wzWYse59x4vqhoCbt4QAvD_BwE" target="_blank">Best Brokerage for Beginners: Robinhood</a> </h2></li>
+        </div>
+        <div class="resourcediv">
+            <li class="resource"> <h2> <a class="resource" href="https://www.amazon.com/Intelligent-Investor-Definitive-Investing-Essentials/dp/0060555661" target="_blank"> Best book to read: The Intelligent Investor by Benjamin Graham  </a> </h2> </li>
+        </div>
+    </ul>
+
+</body>
+</html>

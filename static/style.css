@@ -59,7 +59,7 @@ canvas {
     color: rgb(0,204,0);
 }
 .redmessage {
-    color: rgb(139,0,0);
+    color: rgb(255, 0, 0);
 }
 .leftalign {
     float: left;
@@ -71,7 +71,10 @@ canvas {
 .rightalign{
     float: left;
     height: 100%;
-    width: 33.5%;
+    width: 33%;
+    border: 2px solid white;
+    border-right: 0px;
+    border-top: 0px;
     background-color: rgb(43, 43, 43);
     
 
@@ -112,6 +115,7 @@ h3 {
     width: 100%;
     padding-bottom: 20px;
     background-color: rgb(43, 43, 43);
+    border-bottom: 2px solid white;
 }
 .indexh2 {
     margin: 0px 0px 0px;
@@ -124,6 +128,7 @@ table td + td { border-left:2px solid white; }
 
 .newsh1 {
     text-align: center;
+    margin-bottom: 20px;
 }
 .newsdiv {
     background-color: rgb(43, 43, 43);
@@ -170,10 +175,38 @@ legend, .form-control-label, input {
     margin-bottom: 20px;
     border: 2px solid white;
 }
-#ticker {
+input {
     border: 2px solid white;
     background-color:  rgb(43, 43, 43);
 }
 fieldset {
     margin-bottom: 10px;
+}
+#Watchlist {
+    border-bottom: 2px solid white;
+    margin-bottom: 0px;
+    padding-bottom: 19.440px;
+}
+.specificli {
+    margin-left: 450px;
+    margin-right: 100px;
+}
+.resource {
+    font-style: none;
+    color: blue;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    line-height: 150px;
+}
+.resourcediv {
+    width: 60%;
+    height: 150px;
+    left: 50%;
+    align-self: center;
+    background-color: white;
+    align-content: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
 }

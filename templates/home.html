@@ -18,9 +18,15 @@
                 <li><a href="register.html">REGISTER</a></li>
                 <li><a href="login.html">LOGIN</a></li>
                 <li><a href="stocksearch.html">STOCK SEARCH</a> </li>
+                <li><a href="resources.html">RESOURCES</a></li>
+                {% if current_user.is_authenticated %}
+                    <li class = 'specificli'> <a> YOU ARE CURRENTLY LOGGED IN AS: {{current_user.username}} </a> </li>
+                    <li> <a href="/logout"> LOGOUT </a> </li>
+                {% endif %}
             </ul>
         </nav>
     </div> 
+
     <h1 class = 'maintitle'> StocksFinder </h1>
 
     <div class = 'majorindexes'>

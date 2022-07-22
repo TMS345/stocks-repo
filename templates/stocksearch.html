@@ -16,7 +16,12 @@
                 <li><a href="home.html">HOME</a></li>
                 <li><a href="register.html">REGISTER</a></li>
                 <li><a href="login.html">LOGIN</a></li>
-                <li><a href="">STOCK SEARCH</a> </li>
+                <li><a href="stocksearch.html">STOCK SEARCH</a> </li>
+                <li><a href="resources.html">RESOURCES</a></li>
+                {% if current_user.is_authenticated %}
+                    <li class="specificli"> <a> YOU ARE CURRENTLY LOGGED IN AS: {{current_user.username}} </a> </li>
+                    <li> <a href="/logout"> LOGOUT </a> </li>
+                {% endif %}
             </ul>
         </nav>
     </div> 
@@ -35,7 +40,17 @@
                     {{ form.ticker(class = "form-control form-control-lg") }}
 
                 </div>
+                <div>
+                    {{ form.timeperiod.label(class = "form-control-label") }}
+                    {{ form.timeperiod(class = "form-control form-control-lg") }}
+
+                </div>
+                <div>
+                    {{ form.timeinterval.label(class = "form-control-label") }}
+                    {{ form.timeinterval(class = "form-control form-control-lg") }}
+                </div>
             </fieldset>
+
             <div>
                 {{ form.submit(class = "btn btn-outline-info") }}
                 {{ form.csrf_token }}
